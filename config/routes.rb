@@ -8,5 +8,15 @@ Rails.application.routes.draw do
    # get 'hello/special'
     get 'hello/show'
     get 'hello/list'
+
+
+    get 'books/keyword'
+    post 'keyword/search'
+    
+    get 'view/keyword'
+    post 'keyword/search'
+    get 'view/html5'
+    get 'view/select'
+    
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

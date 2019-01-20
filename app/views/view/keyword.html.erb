@@ -1,0 +1,6 @@
+<%= form_tag({ controller: :keyword, action: :search },
+id :fm, class: :search) do %>
+<label for="keywd">kensaku keyword:</label>
+<%= text_field_tag : keywd,'',size: 30 %>
+<%=submit_tag 'kensaku'%>
+<% end %>

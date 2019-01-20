@@ -1,0 +1,33 @@
+<%= form_for(@book) do |f| %>
+<%= f.select :publish, ['company_a', 'company_b', 'company_c'],
+{ include_blank: 'selectPLZ'}, class: 'pub' %> <br />
+    <select class ="pub" name="book[publish]" id="book_publish">
+        <option value="">selectPLZ</option>
+        <option selected="selected" value="company_a">company_a</option>
+        <option value="company_b">company_b</option>
+        <option value="company_c">company_c</option>
+    </select>
+<%= f.select :publish%>
+    {'company_a' => 1, company_b => 2, company_c => 3 } %><br />
+    <select name="book[publish]" id="book_publish">
+        <option value="company_a">company_a</option>
+        <option value="company_b">company_b</option>
+        <option value="company_c">company_c</option>
+    </select>
+<%= f.select(:publish,
+[['company_a', 1], ['company_b', 2], ['company_c', 3]]) %><br />
+<select name="book[publish]" id="book_publish">
+        <option value="company_a">company_a</option>
+        <option value="company_b">company_b</option>
+        <option value="company_c">company_c</option>
+</select>
+<%= f.select :publish, ['company_a', 'company_b', 'company_c'],
+{ include_blank: 'selectPLZ'}, multiple: true %>
+<input name="book[publish][]" type="hidden" value="" />
+<select multiple="multiple" name="book[publish]" id="book_publish">
+        <option value="">selectPLZ</option>
+        <option selected="selected" value="company_a">company_a</option>
+        <option value="company_b">company_b</option>
+        <option value="company_c">company_c</option>
+</select>
+<% end %>

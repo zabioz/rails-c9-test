@@ -1,0 +1,40 @@
+<%= form_for(@book) do |f| %>
+ColorBox:
+<%= f.color_field :isbn %><br />
+    <input value="#000000" type="color" name="book[isbn]" id="book_isbn" />
+DateInputBox:
+<%= f.date_field :published %><br />
+    <input type="date" name="book[published]" id="book_published" />
+TimeInputBox
+<%= f.time_field :published%><br />
+    <input type="time" name="book[published]" id="book_published" />
+DateTimeInputBox:
+<%= f.datetime_field :published%><br />
+    <input type="datetime-local" name="book[published]" id="book_published" /><%=%><br />
+<%= f.datetime_local_field :published%><br />
+    <input type="datetime-local" name="book[published]" id="book_published" /><%=%><br />
+MonthInputBox:
+<%= f.month_field :published %><br />
+    <input type="month" name="book[published]" id="book_published" />
+WeekInputBox:
+<%= f.week_field :published %><br />
+    <input type="week" name="book[published]" id="book_published" />
+EmailInputBox:
+<%= f.email_field :isbn, size: 25, maxlength: 30 %><br />
+    <input size="25" maxlength="30" type="email" name="book[isbn]" id="book_isbn" />
+NumberInputBox:
+<%= f.number_field :price, min: 10, max: 10000, step: 10 %><br />
+    <input min="10" max="10000" step="10" type="number" name="book[price]" id="book_price" />
+slider:
+<%= f.range_field :price, min: 0, max: 10000 %><br />
+    <input min="0" max="10000" type="range" name="book[price]" id="book_price" />
+SearchBox:
+<%= f.serch_field :isbn, size: 10, maxlength: 15 %><br />
+    <input size="10" maxlength="15" type="search" name="book[isbn]" id="book_isbn" />
+TelInputBox:
+<%= f.telephone_field :isbn, size: 15, maxlength: 20 %><br />
+    <input size="15" maxlength="20" type="tel" name="book[isbn]" id="book_isbn" />
+URLInputBox:
+<%= f.url_field :isbn, size: 10, maxlength: 15 %><br />
+    <input size="10" maxlength="15" type="url" name="book[isbn]" id="book_isbn" />
+<% end %>
